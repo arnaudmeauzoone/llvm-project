@@ -31,6 +31,7 @@
 #include "Targets/OSTargets.h"
 #include "Targets/PPC.h"
 #include "Targets/RISCV.h"
+#include "Targets/RISCVS.h"
 #include "Targets/SPIR.h"
 #include "Targets/Sparc.h"
 #include "Targets/SystemZ.h"
@@ -132,6 +133,9 @@ std::unique_ptr<TargetInfo> AllocateTarget(const llvm::Triple &Triple,
 
   case llvm::Triple::lanai:
     return std::make_unique<LanaiTargetInfo>(Triple, Opts);
+
+  case llvm::Triple::riscvs:
+    return std::make_unique<RISCVS64TargetInfo>(Triple, Opts);
 
   case llvm::Triple::aarch64_32:
     if (Triple.isOSDarwin())
