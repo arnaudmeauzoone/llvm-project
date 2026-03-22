@@ -1,3 +1,4 @@
+# File: CMakeLists.txt
 # 1. Déclarer le groupe global de l'architecture (C'EST LA CLÉ ICI)
 add_llvm_component_group(RISCVS)
 
