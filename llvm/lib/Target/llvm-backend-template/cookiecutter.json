@@ -1,0 +1,4 @@
+{
+  "target_name": "RISCVS",
+  "target_name_lower": "{{ cookiecutter.target_name | lower }}"
+}
