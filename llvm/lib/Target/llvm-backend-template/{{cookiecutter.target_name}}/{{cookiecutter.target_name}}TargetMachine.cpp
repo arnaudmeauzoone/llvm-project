@@ -37,3 +37,7 @@ extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitialize{{cookiecutter.target_nam
 extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitialize{{cookiecutter.target_name}}Target() {
   RegisterTargetMachine<{{cookiecutter.target_name}}TargetMachine> X(getThe{{cookiecutter.target_name}}Target());
 }
+
+extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitialize{{cookiecutter.target_name}}AsmPrinter() {}
+extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitialize{{cookiecutter.target_name}}AsmParser() {}
+extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitialize{{cookiecutter.target_name}}Disassembler() {}

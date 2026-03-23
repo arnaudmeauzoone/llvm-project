@@ -17,6 +17,6 @@ Target &llvm::getThe{{cookiecutter.target_name}}Target() {
 }
 
 extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitialize{{cookiecutter.target_name}}TargetInfo() {
-  RegisterTarget<Triple::{{cookiecutter.target_name}}, /*HasJIT=*/false>
-      X(getThe{{cookiecutter.target_name}}Target(), "{{cookiecutter.target_name}}", "RISC-Vs Target", "{{cookiecutter.target_name}}");
+  RegisterTarget<Triple::UnknownArch, /*HasJIT=*/false>
+      X(getThe{{cookiecutter.target_name}}Target(), "{{cookiecutter.target_name_lower}}", "RISC-Vs Target", "{{cookiecutter.target_name}}");
 }
